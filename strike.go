@@ -41,7 +41,7 @@ type Torrent struct {
 func main() {
 	app := cli.NewApp()
 	app.Name = "strikecli"
-	app.Usage = "Use getstrike search from your terminal"
+	app.Usage = "Use getstrike search from the command line."
 	app.Version = "0.0.1"
 	app.Flags = []cli.Flag{
 		cli.StringFlag{
