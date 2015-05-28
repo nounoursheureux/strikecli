@@ -42,6 +42,7 @@ func main() {
     app := cli.NewApp()
     app.Name = "strikecli"
     app.Usage = "Use getstrike search from your terminal"
+    app.Version = "0.0.1"
     app.Flags = []cli.Flag {
         cli.StringFlag {
             Name: "category, c",
@@ -50,23 +51,37 @@ func main() {
         },
         cli.StringFlag {
             Name: "format, f",
-            Value: "%t | %S",
+            Usage:
+            `set the output formatting, by matching the following sequences:
+             %t: the torrent title
+             %m: the torrent magnet link
+             %h: the torrent hash
+             %S: the number of seeders
+             %l: the number of leechers
+             %s: the torrent size
+             %d: the torrent upload date
+             %c: the torrent category
+             %sc: the torrent sub category
+             %f: the torrent file count
+             %u: the uploader username`,
+            Value: "%t",
         },
         cli.IntFlag {
             Name: "limit, l",
+            Usage: "set the maximum output torrents",
             Value: 100,
         },
     }
     app.Commands = []cli.Command {
         {
             Name: "search",
-            Usage: "search for the given keywords",
+            Usage: "Search for the given keywords",
             Action: search,
             Flags: app.Flags,
         },
         {
             Name: "info",
-            Usage: "get informations on the given hash",
+            Usage: "Get informations on the given hash",
             Action: info,
             Flags: app.Flags,
         },
