@@ -18,6 +18,7 @@ Options:
 - `--limit [number]` or `-l [number]`: set the maximum number of responses
 - `--category [category name]` or `-c [category name]`: filter by category
 - `--format [format string]` or `-f [format string]`: format the output by matching the following [sequences](#Formatting)
+- `--script-mode`: don't print the number of results and the search terms
 
 #### `info`
 

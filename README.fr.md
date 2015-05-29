@@ -18,6 +18,7 @@ Options:
 - `--limit [nombre]` ou `-l [nombre]`: limite le nombre maximum de réponses
 - `--category [catégorie]` or `-c [catégorie]`: filtre par catégorie
 - `--format [pattern]` or `-f [pattern]`: applique un pattern en remplaçant les [séquences suivantes](#Formatting)
+- `--script-mode`: supprime la 1e ligne qui indique le nombre de résultas et les mots-clés utilisés
 
 #### `info`
 
