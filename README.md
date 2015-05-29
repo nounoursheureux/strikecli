@@ -21,7 +21,7 @@ Options:
 
 #### `info`
 
-Get informations on the given hashes.
+Get informations on the given hashes.    
 Basic syntax: `strikecli info [torrents hashes]`         
 Options: see above
 

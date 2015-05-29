@@ -90,6 +90,10 @@ func main() {
 
 func search(c *cli.Context) {
 	query := url.QueryEscape(strings.Join(c.Args(), " "))
+	if len(query) < 4 {
+		println("Your query must be at least 4 characters long without white space.")
+		return
+	}
 	uri := "https://getstrike.net/api/v2/torrents/search/?phrase=" + query
 	if c.String("category") != "" {
 		uri = uri + "&category=" + url.QueryEscape(c.String("category"))
