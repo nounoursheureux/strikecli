@@ -17,7 +17,7 @@ Basic syntax: `strikecli search [keywords]`
 Options:          
 - `--limit [number]` or `-l [number]`: set the maximum number of responses
 - `--category [category name]` or `-c [category name]`: filter by category
-- `--format [format string]` or `-f [format string]`: format the output by matching the following [sequences]("#Formatting")
+- `--format [format string]` or `-f [format string]`: format the output by matching the following [sequences](#Formatting)
 
 #### `info`
 
