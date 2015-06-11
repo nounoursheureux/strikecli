@@ -2,7 +2,6 @@ package main
 
 import (
 	"encoding/json"
-	"fmt"
 	"github.com/codegangsta/cli"
 	"io/ioutil"
 	"log"
@@ -65,10 +64,6 @@ func main() {
              %u: the uploader username`,
 			Value: "%t",
 		},
-		cli.BoolFlag{
-			Name:  "script-mode",
-			Usage: "don't print the number of results and the search terms",
-		},
 		cli.IntFlag{
 			Name:  "limit, l",
 			Usage: "set the maximum output torrents",
@@ -107,9 +102,6 @@ func search(c *cli.Context) {
 	err := json.Unmarshal(data, &obj)
 	if err != nil {
 		log.Fatal(err)
-	}
-	if !c.Bool("script-mode") {
-		fmt.Printf("Your search for \"%s\" returned %d results:\n", strings.Join(c.Args(), " "), obj.Results)
 	}
 	for i, item := range obj.Torrents {
 		if i >= c.Int("limit") {
