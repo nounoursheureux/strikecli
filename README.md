@@ -4,6 +4,8 @@ Use [getstrike](https://getstrike.net/torrents) search from command line.
 
 ### Install
 
+If you want an executable see the [releases](https://github.com/nounoursheureux/strikecli/releases) page. Or you can compile it yourself:        
+
 `go get github.com/nounoursheureux/strikecli`
 
 ### Usage 

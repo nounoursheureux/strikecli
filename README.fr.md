@@ -4,6 +4,8 @@ Un client [getstrike](https://getstrike.net/torrents) en ligne de commande.
 
 ### Installation
 
+Si vous voulez un exécutable ils se trouvent [ici](https://github.com/nounoursheureux/strikecli/releases). Ou vous pouvez compiler vous-même:       
+
 `go get github.com/nounoursheureux/strikecli`
 
 ### Utilisation
